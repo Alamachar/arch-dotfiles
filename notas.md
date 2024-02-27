@@ -1,0 +1,60 @@
+# ArchLinux
+
+``sudo pacman -Syu``   (actualizar la base de datos de los repositorios y actualizar el sistema)
+
+``sudo pacman -S paquete``   (instala el paquete)
+
+``sudo pacman -R paquete``   (desinstala el paquete)
+
+``sudo pacman -Rs paquete``   (desinstala el paquete y sus dependencias no útiles para el sistema)
+
+``sudo pacman -Ss paquete``   (busca un paquete específico)
+
+``sudo pacman -Sw paquete``   (descarga el paquete pero no lo instala)
+
+``sudo pacman -U /ruta/paquete.pkg.tar.gz``   (instala un paquete desde una carpeta local)
+
+``sudo pacman -Q``   (muestra la lista de todos los paquetes instalados en el sistema)
+
+``sudo pacman -Scc``   (borra todos los paquetes guardados en la cache de pacman en: /var/cache/pacman/pkg)
+# Mis packages
+
+``sudo pacman -S bpytop neofetch lolcat figlet``
+
+``sudo pacman -Rs gnome-contacts gnome-tour``
+
+``flatpak install com.microsoft.Edge com.google.Chrome org.virt_manager.virt-viewer org.gnome.Boxes io.github.diegoivan.pdf_metadata_editor com.rafaelmardojai.Blanket app.drey.Warp com.github.finefindus.eyedropper io.gitlab.adhami3310.Converter bottles io.gitlab.adhami3310.Impression com.github.maoschanz.drawing com.mattjakeman.ExtensionManager org.gnome.World.PikaBackup org.gnome.gitlab.YaLTeR.VideoTrimmer`` 
+
+``sudo pacman -S --needed git && git clone https://aur.archlinux.org/rar.git && cd rar && makepkg -si``
+# cambiar lenguaje
+
+comentar el lenguaje actual y descomentar el español
+
+	sudo nano /etc/locate.gen
+	sudo locate-gen
+sudo nano /etc/locale.conf
+
+    es_ES.UTF-8
+    unset LANG
+
+sudo nano /etc/vconsole.conf
+
+    KEYMAP=es
+    XKBLAYOUT=es
+
+# Instalar virtualbox
+    sudo pacman -S virtualbox virtualbox-guest-iso
+    sudo gpasswd -a $USER vboxusers
+    sudo modprobe vboxdrv
+
+# Añadir atajo teclado terminal
+Comando para abrir terminal: kgx
+
+# Instalar diistrobox
+    sudo pacman -S distrobox docker
+    sudo systemctl start docker
+    sudo usermod -aG docker $USER
+    newgrp docker o reiniciar
+    
+    distrobox create --image ubuntu:22.04 --name test
+    distrobox enter test
