@@ -58,3 +58,11 @@ Comando para abrir terminal: kgx
     
     distrobox create --image ubuntu:22.04 --name test
     distrobox enter test
+
+# Habilitar bluetooth
+    systemctl status bluetooth  #Comprobar el estado del servicio
+
+    sudo systemctl start bluetooth  #Iniciar servicio
+    systemctl enable bluetooth  #Auto iniciar servicio
+
+    systemctl status bluetooth #Comprobar el estado del servicio
