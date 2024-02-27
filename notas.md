@@ -19,14 +19,14 @@
 ``sudo pacman -Scc``   (borra todos los paquetes guardados en la cache de pacman en: /var/cache/pacman/pkg)
 # Mis packages
 
-``sudo pacman -S bpytop neofetch lolcat figlet``
+``sudo pacman -S bpytop neofetch lolcat ntfsprogs figlet``
 
-``sudo pacman -Rs gnome-contacts gnome-tour``
+``sudo pacman -Rs gnome-tour``
 
-``flatpak install com.microsoft.Edge com.google.Chrome org.virt_manager.virt-viewer org.gnome.Boxes io.github.diegoivan.pdf_metadata_editor com.rafaelmardojai.Blanket app.drey.Warp com.github.finefindus.eyedropper io.gitlab.adhami3310.Converter bottles io.gitlab.adhami3310.Impression com.github.maoschanz.drawing com.mattjakeman.ExtensionManager org.gnome.World.PikaBackup org.gnome.gitlab.YaLTeR.VideoTrimmer`` 
+``sudo flatpak install com.microsoft.Edge com.google.Chrome org.virt_manager.virt-viewer org.gnome.Boxes io.github.diegoivan.pdf_metadata_editor com.rafaelmardojai.Blanket app.drey.Warp com.github.finefindus.eyedropper io.gitlab.adhami3310.Converter bottles io.gitlab.adhami3310.Impression com.github.maoschanz.drawing com.mattjakeman.ExtensionManager org.gnome.World.PikaBackup org.gnome.gitlab.YaLTeR.VideoTrimmer`` 
 
 Compatibilidad con ntfs
-``pacman -S ntfsprogs``
+``sudo pacman -S ntfsprogs``
 
 Instalar rar
 ``sudo pacman -S --needed git && git clone https://aur.archlinux.org/rar.git && cd rar && makepkg -si``
@@ -48,6 +48,10 @@ sudo nano /etc/vconsole.conf
     XKBLAYOUT=es
 
 # Instalar virtualbox
+**arch kernel** -- virtualbox-host-modules-arch
+
+**lts kernel** -- virtualbox-host-dkms
+
     sudo pacman -S virtualbox virtualbox-guest-iso
     sudo gpasswd -a $USER vboxusers
     sudo modprobe vboxdrv
@@ -71,3 +75,26 @@ Comando para abrir terminal: kgx
     systemctl enable bluetooth  #Auto iniciar servicio
 
     systemctl status bluetooth #Comprobar el estado del servicio
+
+# instalar AUR
+    sudo pacman -Syu
+    sudo pacman -S --needed base-devel git
+    git clone https://aur.archlinux.org/yay.git
+    cd yay
+    makepkg -si
+    yay --version
+
+# Spotify
+    yay -S spotify spicetify-cli
+    sudo chmod a+wr /opt/spotify
+    sudo chmod a+wr /opt/spotify/Apps -R
+
+# iniciar sesion en spotify
+    spicetify backup apply
+    curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh
+
+
+# Instalar Wine
+Activar repo multilib
+
+    sudo pacman -S wine lib32-libpulse
