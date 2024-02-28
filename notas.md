@@ -19,10 +19,13 @@
 ``sudo pacman -Scc``   (borra todos los paquetes guardados en la cache de pacman en: /var/cache/pacman/pkg)
 # Mis packages
 
-``sudo pacman -S bpytop neofetch lolcat ntfsprogs figlet``
+``sudo pacman -S bpytop neofetch lolcat firefox ntfsprogs grub-customizer figlet``
 
-``sudo pacman -Rs gnome-tour``
 
+remover progamas caca
+``sudo pacman -Rs epiphany gnome-tour``
+
+instalar flatpak apps
 ``sudo flatpak install com.microsoft.Edge com.google.Chrome org.virt_manager.virt-viewer org.gnome.Boxes io.github.diegoivan.pdf_metadata_editor com.rafaelmardojai.Blanket app.drey.Warp com.github.finefindus.eyedropper io.gitlab.adhami3310.Converter bottles io.gitlab.adhami3310.Impression com.github.maoschanz.drawing com.mattjakeman.ExtensionManager org.gnome.World.PikaBackup org.gnome.gitlab.YaLTeR.VideoTrimmer`` 
 
 Compatibilidad con ntfs
@@ -76,7 +79,7 @@ Comando para abrir terminal: kgx
 
     systemctl status bluetooth #Comprobar el estado del servicio
 
-# instalar AUR
+# instalar AUR o yay para los amigos
     sudo pacman -Syu
     sudo pacman -S --needed base-devel git
     git clone https://aur.archlinux.org/yay.git
@@ -93,8 +96,29 @@ Comando para abrir terminal: kgx
     spicetify backup apply
     curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh
 
+# Instalar VScode
+    yay -S visual-studio-code-bin
 
 # Instalar Wine
 Activar repo multilib
 
     sudo pacman -S wine lib32-libpulse
+
+# Escalado fraccionado Xorg
+    yay -S mutter-x11-scaling
+
+    gsettings set org.gnome.mutter experimental-features "['x11-randr-fractional-scaling']"
+
+# Gestos teclado
+https://extensions.gnome.org/extension/4033/x11-gestures/
+
+flatpak install flathub com.github.joseexposito.touche
+
+    yay -S touchegg 
+    sudo systemctl enable touchegg.service
+    sudo systemctl start touchegg
+
+# fiirefox GNOME theme
+https://github.com/rafaelmardojai/firefox-gnome-theme
+
+    curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash
