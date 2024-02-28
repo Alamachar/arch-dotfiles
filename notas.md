@@ -118,7 +118,10 @@ flatpak install flathub com.github.joseexposito.touche
     sudo systemctl enable touchegg.service
     sudo systemctl start touchegg
 
-# fiirefox GNOME theme
+# firefox GNOME theme
 https://github.com/rafaelmardojai/firefox-gnome-theme
 
     curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash
+
+# Problemas con camara app
+    sudo usermod -a -G video $USER
