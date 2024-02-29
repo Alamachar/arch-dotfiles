@@ -19,8 +19,9 @@
 ``sudo pacman -Scc``   (borra todos los paquetes guardados en la cache de pacman en: /var/cache/pacman/pkg)
 # Mis packages
 
-``sudo pacman -S bpytop neofetch lolcat firefox ntfsprogs grub-customizer figlet``
+``sudo pacman -S bpytop lsd bat nerd-fonts neofetch lolcat firefox ntfsprogs grub-customizer figlet``
 
+poner en el terminal una fuente de nerd-fonts
 
 remover progamas caca
 ``sudo pacman -Rs epiphany gnome-tour``
@@ -125,3 +126,8 @@ https://github.com/rafaelmardojai/firefox-gnome-theme
 
 # Problemas con camara app
     sudo usermod -a -G video $USER
+
+# Instalar oh my bash
+https://github.com/ohmybash/oh-my-bash
+
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
