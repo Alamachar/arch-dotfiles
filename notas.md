@@ -19,7 +19,7 @@
 ``sudo pacman -Scc``   (borra todos los paquetes guardados en la cache de pacman en: /var/cache/pacman/pkg)
 # Mis packages
 
-``sudo pacman -S bpytop lsd bat nerd-fonts neofetch lolcat firefox ntfsprogs grub-customizer figlet``
+``sudo pacman -S bpytop steam lsd bat nerd-fonts neofetch lolcat firefox ntfsprogs grub-customizer figlet``
 
 poner en el terminal una fuente de nerd-fonts
 
