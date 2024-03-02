@@ -19,7 +19,7 @@
 ``sudo pacman -Scc``   (borra todos los paquetes guardados en la cache de pacman en: /var/cache/pacman/pkg)
 # Mis packages
 
-``sudo pacman -S bpytop steam lsd bat nerd-fonts neofetch lolcat firefox ntfsprogs grub-customizer figlet``
+``sudo pacman -S bpytop steam discord lsd bat nerd-fonts neofetch lolcat firefox ntfsprogs grub-customizer figlet shotwell cmatrix nvidia-settings obs-studio man-pages-es zsh gmip``
 
 poner en el terminal una fuente de nerd-fonts
 
@@ -27,7 +27,7 @@ remover progamas caca
 ``sudo pacman -Rs epiphany gnome-tour``
 
 instalar flatpak apps
-``sudo flatpak install com.microsoft.Edge com.google.Chrome org.virt_manager.virt-viewer org.gnome.Boxes io.github.diegoivan.pdf_metadata_editor com.rafaelmardojai.Blanket app.drey.Warp com.github.finefindus.eyedropper io.gitlab.adhami3310.Converter bottles io.gitlab.adhami3310.Impression com.github.maoschanz.drawing com.mattjakeman.ExtensionManager org.gnome.World.PikaBackup org.gnome.gitlab.YaLTeR.VideoTrimmer`` 
+``sudo flatpak install app.drey.Warp com.belmoussaoui.Decoder com.github.finefindus.eyedropper com.github.maoschanz.drawing com.google.Chrome com.mattjakeman.ExtensionManager com.rafaelmardojai.Blanket io.github.diegoivan.pdf_metadata_editor io.gitlab.adhami3310.Converter io.gitlab.adhami3310.Impression org.gnome.World.PikaBackup org.gnome.gitlab.YaLTeR.VideoTrimmer org.virt_manager.virt-viewer`` 
 
 Compatibilidad con ntfs
 ``sudo pacman -S ntfsprogs``
@@ -100,6 +100,9 @@ Comando para abrir terminal: kgx
 # Instalar VScode
     yay -S visual-studio-code-bin
 
+# Instalar aur packages
+yay -S whatsdesk-bin microsoft-edge-stable-bin
+
 # Instalar Wine
 Activar repo multilib
 
@@ -127,7 +130,11 @@ https://github.com/rafaelmardojai/firefox-gnome-theme
 # Problemas con camara app
     sudo usermod -a -G video $USER
 
-# Instalar oh my bash
-https://github.com/ohmybash/oh-my-bash
+# Instalar oh my zsh
+https://github.com/ohmyzsh/ohmyzsh/wiki
 
-    bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Minegrub
+
+    https://github.com/Lxtharia/minegrub-theme

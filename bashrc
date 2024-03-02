@@ -10,9 +10,10 @@ alias grep='grep --color=auto'
 #PS1='[\u@\h \W]\$ '
 
 # Alias cortos
-alias ll='ls -alFh'
-alias la='ls -A'
-alias l='ls -CF'
+alias ll='lsd -alFh'
+alias la='lsd -A'
+alias ls='lsd'
+alias cat='bat'
 
 # Colores en ls
 export LS_OPTIONS='--color=auto'
