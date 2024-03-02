@@ -17,6 +17,11 @@
 ``sudo pacman -Q``   (muestra la lista de todos los paquetes instalados en el sistema)
 
 ``sudo pacman -Scc``   (borra todos los paquetes guardados en la cache de pacman en: /var/cache/pacman/pkg)
+
+# cambiar directorios 
+
+https://wiki.archlinux.org/title/XDG_user_directories
+
 # Mis packages
 
 ``sudo pacman -S bpytop steam discord lsd bat nerd-fonts neofetch lolcat firefox ntfsprogs grub-customizer figlet shotwell cmatrix nvidia-settings obs-studio man-pages-es zsh gmip``
@@ -134,6 +139,9 @@ https://github.com/rafaelmardojai/firefox-gnome-theme
 https://github.com/ohmyzsh/ohmyzsh/wiki
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 # Minegrub
 
