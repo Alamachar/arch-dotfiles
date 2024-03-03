@@ -43,6 +43,11 @@ Compatibilidad con ntfs
 Instalar rar
 ``sudo pacman -S --needed git && git clone https://aur.archlinux.org/rar.git && cd rar && makepkg -si``
 
+quitar extension caca app
+
+sudo rm /usr/share/applications/org.gnome.Extensions.desktop
+
+
 # cambiar lenguaje
 
 comentar el lenguaje actual y descomentar el español
