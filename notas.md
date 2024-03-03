@@ -1,6 +1,6 @@
 # poder subir cosas a github
-    git config --global user.name "Alamachar"
-    git config --global user.email "pablomunozpalma@gmail.com"
+    git config --global user.name "user"
+    git config --global user.email "correo@example.com"
 
 # Cambiar tamaño texto en el archiso
 
