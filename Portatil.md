@@ -1,4 +1,7 @@
 # Configuracion extra para portatil
+## Screen tearing
+
+Usar drivers propietarios
 
 ## Gestos teclado
 https://extensions.gnome.org/extension/4033/x11-gestures/
