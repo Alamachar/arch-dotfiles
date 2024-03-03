@@ -146,3 +146,23 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # Minegrub
 
     https://github.com/Lxtharia/minegrub-theme
+
+# IMPRESORAS
+
+https://mundojuancri.com/impresion-en-archlinux#Controladores_para_nuestra_impresora
+
+    sudo pacman -S cups 
+    sudo pacman -S avahi
+    sudo systemctl enable avahi-daemon.service
+
+    sudo systemctl start avahi-daemon.service
+    sudo systemctl restart cups.service
+    sudo pacman -S gutenprint foomatic-db foomatic-db-engine foomatic-db-nonfree hplip splix cups-pdf
+
+    sudo systemctl disable cups.service
+
+    sudo systemctl enable cups.service
+
+    sudo systemctl daemon-reload
+
+    sudo systemctl start cups.service 
