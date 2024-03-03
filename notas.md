@@ -1,25 +1,10 @@
+# poder subir cosas a github
     git config --global user.name "Alamachar"
     git config --global user.email "pablomunozpalma@gmail.com"
 
-# ArchLinux
+# Cambiar tamaño texto en el archiso
 
-``sudo pacman -Syu``   (actualizar la base de datos de los repositorios y actualizar el sistema)
-
-``sudo pacman -S paquete``   (instala el paquete)
-
-``sudo pacman -R paquete``   (desinstala el paquete)
-
-``sudo pacman -Rs paquete``   (desinstala el paquete y sus dependencias no útiles para el sistema)
-
-``sudo pacman -Ss paquete``   (busca un paquete específico)
-
-``sudo pacman -Sw paquete``   (descarga el paquete pero no lo instala)
-
-``sudo pacman -U /ruta/paquete.pkg.tar.gz``   (instala un paquete desde una carpeta local)
-
-``sudo pacman -Q``   (muestra la lista de todos los paquetes instalados en el sistema)
-
-``sudo pacman -Scc``   (borra todos los paquetes guardados en la cache de pacman en: /var/cache/pacman/pkg)
+    setfont ter-132n
 
 # cambiar directorios 
 
@@ -27,7 +12,7 @@ https://wiki.archlinux.org/title/XDG_user_directories
 
 # Mis packages
 
-``sudo pacman -S bpytop steam discord lsd bat nerd-fonts neofetch lolcat firefox ntfsprogs grub-customizer figlet shotwell cmatrix nvidia-settings obs-studio man-pages-es zsh gmip``
+``sudo pacman -S bpytop steam discord lsd bat nerd-fonts neofetch lolcat firefox ntfsprogs grub-customizer figlet shotwell cmatrix nvidia-settings obs-studio man-pages-es zsh gimp filezilla``
 
 poner en el terminal una fuente de nerd-fonts
 
@@ -43,10 +28,9 @@ Compatibilidad con ntfs
 Instalar rar
 ``sudo pacman -S --needed git && git clone https://aur.archlinux.org/rar.git && cd rar && makepkg -si``
 
-quitar extension caca app
+# quitar extension caca app
 
-sudo rm /usr/share/applications/org.gnome.Extensions.desktop
-
+``sudo rm /usr/share/applications/org.gnome.Extensions.desktop``
 
 # cambiar lenguaje
 
@@ -119,29 +103,17 @@ yay -S whatsdesk-bin microsoft-edge-stable-bin
 # Instalar Wine
 Activar repo multilib
 
-    sudo pacman -S wine lib32-libpulse
+    sudo pacman -S wine
 
 # Escalado fraccionado Xorg
     yay -S mutter-x11-scaling
 
     gsettings set org.gnome.mutter experimental-features "['x11-randr-fractional-scaling']"
 
-# Gestos teclado
-https://extensions.gnome.org/extension/4033/x11-gestures/
-
-flatpak install flathub com.github.joseexposito.touche
-
-    yay -S touchegg 
-    sudo systemctl enable touchegg.service
-    sudo systemctl start touchegg
-
-# firefox GNOME theme
+# firefox GNOME-Browser theme
 https://github.com/rafaelmardojai/firefox-gnome-theme
 
     curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash
-
-# Problemas con camara app
-    sudo usermod -a -G video $USER
 
 # Instalar oh my zsh
 https://github.com/ohmyzsh/ohmyzsh/wiki
@@ -155,22 +127,3 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
     https://github.com/Lxtharia/minegrub-theme
 
-# IMPRESORAS
-
-https://mundojuancri.com/impresion-en-archlinux#Controladores_para_nuestra_impresora
-
-    sudo pacman -S cups 
-    sudo pacman -S avahi
-    sudo systemctl enable avahi-daemon.service
-
-    sudo systemctl start avahi-daemon.service
-    sudo systemctl restart cups.service
-    sudo pacman -S gutenprint foomatic-db foomatic-db-engine foomatic-db-nonfree hplip splix cups-pdf
-
-    sudo systemctl disable cups.service
-
-    sudo systemctl enable cups.service
-
-    sudo systemctl daemon-reload
-
-    sudo systemctl start cups.service 
