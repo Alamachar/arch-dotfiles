@@ -1,3 +1,6 @@
+    git config --global user.name "Alamachar"
+    git config --global user.email "pablomunozpalma@gmail.com"
+
 # ArchLinux
 
 ``sudo pacman -Syu``   (actualizar la base de datos de los repositorios y actualizar el sistema)
