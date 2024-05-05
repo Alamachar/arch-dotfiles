@@ -12,7 +12,7 @@ https://wiki.archlinux.org/title/XDG_user_directories
 
 # Mis packages
 
-``sudo pacman -S bpytop steam discord lsd bat nerd-fonts neofetch lolcat firefox ntfsprogs grub-customizer figlet shotwell cmatrix nvidia-settings obs-studio man-pages-es zsh gimp filezilla``
+``sudo pacman -S bpytop steam discord lsd bat nerd-fonts neofetch neovim fastfetch lolcat firefox ntfsprogs grub-customizer figlet shotwell cmatrix nvidia-settings obs-studio man-pages-es zsh gimp filezilla``
 
 poner en el terminal una fuente de nerd-fonts
 
