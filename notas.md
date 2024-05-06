@@ -126,4 +126,32 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # Minegrub
 
     https://github.com/Lxtharia/minegrub-theme
+# wayland
+Enable modeset by adding kernel parameters via Grub
+Edit this file:
 
+/etc/default/grub
+and add nvidia-drm.modeset=1 and nvidia-drm.fbdev=1 like this:
+
+	GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet nvidia-drm.modeset=1 nvidia-drm.fbdev=1"
+Save and exit the file. Next, regenerate grub config:
+
+Copy
+grub-mkconfig -o /boot/grub/grub.cfg
+Then reboot.
+
+
+If Wayland still doesn’t load (Continues to use X11):
+
+I had an issue with a udev rule that prevented Wayland from loading, even with the kernel parameters above. I found this article on the Arch Wiki.
+
+In short, as it mentions, there was a udev rule that was causing my issue. So I overrode the rule as mentioned to get this to work:
+
+	ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
+Next, make sure GDM isn’t configured to disable wayland. Remove the file /etc/gdm/custom.conf.
+
+Finally, reboot.
+
+	$ gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
+
+https://wiki.archlinux.org/title/HiDPI
