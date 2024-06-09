@@ -66,5 +66,3 @@ map <C-n> :NERDTreeToggle<CR>  " Mostrar/ocultar NERDTree con Ctrl + N
 lua << EOF
 require("startup").setup({theme = "dashboard"})
 EOF
-
-
